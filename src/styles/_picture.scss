@@ -1,0 +1,36 @@
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .picture {
+    padding: 1rem;
+    width: 400px;
+    box-shadow: 0 10px 6px -6px #777;
+    font-size: 1.2rem;
+    font-weight: 600;
+    p {
+      color: midnightblue;
+    }
+    a {
+      color: #b7b7b7;
+      &:hover {
+        color: #303030;
+      }
+    }
+    .imageContainer {
+      overflow: hidden; //自動隱藏超出的文字或圖片
+      height: 40vh;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; //超出會被裁切
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.25);
+        }
+      }
+    }
+  }
+}
